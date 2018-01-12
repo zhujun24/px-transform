@@ -1,0 +1,27 @@
+{
+  "name": "px-transform",
+  "version": "0.0.1",
+  "description": "wtf",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhujun24/px-transform.git"
+  },
+  "keywords": [
+    "px-to-rem",
+    "px-to-rem-loader",
+    "px2rem",
+    "px2rem-loader",
+    "px-transform",
+    "css-unit-transform"
+  ],
+  "author": "zhujun24",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhujun24/px-transform/issues"
+  },
+  "homepage": "https://github.com/zhujun24/px-transform#readme"
+}
