@@ -15,7 +15,7 @@ module.exports = function (data) {
   this.cacheable();
   var callback = this.async();
   var newData = data.replace(originUnitReg, function (matched) {
-    return ' ' + (parseFloat(matched) / option.rate).toFixed(option.fixed).replace(/0+$/g, '') + option.targetUnit
+    return ' ' + parseFloat((matched.replace(option.originUnit, '') / option.rate).toFixed(option.fixed)) + option.targetUnit;
   });
   callback(null, newData);
 };
