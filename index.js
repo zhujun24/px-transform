@@ -11,11 +11,11 @@ module.exports = function (data) {
     customOption = require(__dirname + '/../../px-transform.json');
   } catch (e) {}
   var option = Object.assign(defaultOption, customOption);
-  var originUnitReg = new RegExp(' \\d+(\\.\\d+)?' + option.originUnit, 'g');
+  var originUnitReg = new RegExp('( \|:)\\d+(\\.\\d+)?' + option.originUnit, 'g');
   this.cacheable();
   var callback = this.async();
   var newData = data.replace(originUnitReg, function (matched) {
-    return ' ' + parseFloat((matched.replace(option.originUnit, '') / option.rate).toFixed(option.fixed)) + option.targetUnit;
+    return matched.replace(/\d+/, parseFloat((matched.match(/\d+/)[0] / option.rate).toFixed(option.fixed))).replace(option.originUnit, option.targetUnit);
   });
   callback(null, newData);
 };
