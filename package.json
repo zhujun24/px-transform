@@ -1,6 +1,6 @@
 {
   "name": "px-transform",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "一个CSS单位转换的Webpack Loader",
   "main": "index.js",
   "scripts": {
